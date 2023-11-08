@@ -1,19 +1,23 @@
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import Shop from "./pages/Shop.jsx";
+import NavBar from "./components/NavBar";
+import CartSummary from "./components/CartSummary";
 
 const App = () => {
-  const [heading, setHeading] = useState("Magnificent Monkeys");
-
-  const clickHandler = () => {
-    setHeading("Radical Rhinos");
-  };
+  const cartItems = [];
 
   return (
-    <>
-      <button type="button" onClick={clickHandler}>
-        Click Me
-      </button>
-      <h1>{heading}</h1>
-    </>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <CartSummary items={cartItems} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
