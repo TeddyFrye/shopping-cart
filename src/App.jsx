@@ -9,14 +9,15 @@ const App = () => {
 
   return (
     <Router>
-      <div className="App">
-        <NavBar />
-        <CartSummary items={cartItems} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-        </Routes>
-      </div>
+      <CartSummary>
+        <div className="App">
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+          </Routes>
+        </div>
+      </CartSummary>
     </Router>
   );
 };
