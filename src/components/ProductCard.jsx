@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { useCart } from "./path-to/CartContext";
-import "./styles/ProductCard.css";
+import { useCart } from "./CartSummary";
+import "../styles/ProductCard.css";
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
@@ -17,9 +17,16 @@ const ProductCard = ({ product }) => {
 
 ProductCard.propTypes = {
   product: PropTypes.shape({
-    image: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
+    description: PropTypes.string,
+    category: PropTypes.string,
+    image: PropTypes.string.isRequired,
+    rating: PropTypes.shape({
+      rate: PropTypes.number,
+      count: PropTypes.number,
+    }),
   }).isRequired,
 };
 
