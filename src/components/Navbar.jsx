@@ -1,4 +1,5 @@
 import { useCart } from "./CartSummary";
+import { Link } from "react-router-dom";
 
 const CartSummary = () => {
   const { cartItems } = useCart();
@@ -10,8 +11,10 @@ const CartSummary = () => {
 
   return (
     <div>
-      <p>Cart Items: {totalItems}</p>
-      {/* Other cart summary info */}
+      <p>Cart Items: {totalItems > 0 ? totalItems : "0"}</p>
+      <Link to="/">Home </Link>
+      <p> </p>
+      <Link to="/shop">Shop</Link>
     </div>
   );
 };
