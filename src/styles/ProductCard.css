@@ -1,21 +1,51 @@
 .product-card {
-    border: 1px solid #eee;
+    border: 1px solid #9b9b9b;
     box-shadow: 0 2px 3px #ccc;
     padding: 10px;
     text-align: center;
     width:  200px;
     height: 300px;
     margin: 10px;
+    background-color: #ccc;
+  }
+
+.product-card:hover {
+    box-shadow: 0 1px 10px #4d4d4d;
   }
   
 .product-card img {
     max-width: 50px;
     height: auto;
+    transition: transform 0.3s ease, z-index 0s;
+  }
+
+.product-card img:hover {
+    cursor: pointer;
   }
   
+  .product-card img.enlarged {
+    position: fixed; /* Fixed positioning relative to the viewport */
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%) scale(5); /* Adjust position and scale */
+    z-index: 10; /* Ensure it's above the overlay */
+    cursor: pointer;
+  }
+
 .product-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9; /* Below the enlarged image but above everything else */
+    cursor: pointer;
   }
   

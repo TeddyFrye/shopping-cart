@@ -1,13 +1,35 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { useCart } from "./CartSummary";
 import "../styles/ProductCard.css";
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
+  const [isEnlarged, setIsEnlarged] = useState(false);
+
+  const toggleImageSize = () => {
+    setIsEnlarged(!isEnlarged);
+    document.body.classList.toggle("overlay-active");
+  };
+
+  const closeEnlargedImage = () => {
+    if (isEnlarged) {
+      setIsEnlarged(false);
+      document.body.classList.remove("overlay-active");
+    }
+  };
 
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.title} />
+      <img
+        src={product.image}
+        alt={product.title}
+        className={isEnlarged ? "enlarged" : ""}
+        onClick={toggleImageSize}
+      />
+      {isEnlarged && (
+        <div className="overlay" onClick={closeEnlargedImage}></div>
+      )}
       <h3>{product.title}</h3>
       <p>${product.price.toFixed(2)}</p>
       <button onClick={() => addToCart(product)}>Add to Cart</button>
