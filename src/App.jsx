@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Shop from "./pages/Shop.jsx";
-import NavBar from "./components/NavBar";
-import CartSummary from "./components/CartSummary";
+import NavBar from "./components/NavBar.jsx";
+import CartSummary from "./components/CartSummary.jsx";
 
 const App = () => {
   const cartItems = [];
