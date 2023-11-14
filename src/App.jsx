@@ -5,8 +5,6 @@ import NavBar from "./components/Navbar.jsx";
 import CartSummary from "./components/CartSummary.jsx";
 
 const App = () => {
-  const cartItems = [];
-
   return (
     <Router>
       <CartSummary>
