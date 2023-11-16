@@ -1,0 +1,17 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 25px; /* Smaller width for collapsed state */
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    z-index: 100; /* Ensure it's above other elements */
+  }
+  
+  .sidebar.expanded {
+    width: 300px; 
+    }
+  
