@@ -1,15 +1,7 @@
-import { useCart } from "./CartSummary";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
-const NavBar = () => {
-  const { cartItems } = useCart();
-
-  const totalItems = cartItems.reduce(
-    (total, item) => total + item.quantity,
-    0
-  );
-
+const NavBar = ({ toggleCart }) => {
   return (
     <div className="navbar">
       <Link to="/" className="navbar-link">
@@ -18,9 +10,9 @@ const NavBar = () => {
       <Link to="/shop" className="navbar-link">
         Shop
       </Link>
-      <div className="cart-summary">
-        <p>Cart Items: {totalItems > 0 ? totalItems : "0"}</p>
-      </div>
+      <button onClick={toggleCart} className="navbar-link">
+        Cart
+      </button>
     </div>
   );
 };
