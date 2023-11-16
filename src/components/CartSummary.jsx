@@ -7,9 +7,8 @@ export const CartContext = createContext();
 // Custom hook for consuming the context
 export const useCart = () => useContext(CartContext);
 
-const CartSummary = ({ children }) => {
+export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
-
   const addToCart = (product) => {
     setCartItems((prevItems) => {
       // Check if product is already in the cart
@@ -47,48 +46,15 @@ const CartSummary = ({ children }) => {
     });
   };
 
-  // Render the cart summary UI
-  const renderCartSummary = () => {
-    if (cartItems.length === 0) {
-      return <p>Your cart is empty.</p>;
-    }
-
-    return (
-      <div>
-        <h2>Your Cart</h2>
-        <ul>
-          {cartItems.map((item) => (
-            <li key={item.id}>
-              <span>{item.title}</span>
-              <span> - </span>
-              <span>{item.quantity}</span>
-              <span> x ${item.price.toFixed(2)}</span>
-              <button onClick={() => removeFromCart(item.id)}>Remove</button>
-            </li>
-          ))}
-        </ul>
-        <p>Total: ${calculateTotal().toFixed(2)}</p>
-      </div>
-    );
-  };
-
-  const calculateTotal = () => {
-    return cartItems.reduce(
-      (total, item) => total + item.price * item.quantity,
-      0
-    );
-  };
-
   return (
     <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
-      {renderCartSummary()}
       {children}
     </CartContext.Provider>
   );
 };
 
-CartSummary.propTypes = {
+CartProvider.propTypes = {
   children: propTypes.node.isRequired,
 };
 
-export default CartSummary;
+export default CartProvider;
