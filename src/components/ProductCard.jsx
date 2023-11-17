@@ -3,9 +3,11 @@ import PropTypes from "prop-types";
 import { useCart } from "./CartSummary";
 import "../styles/ProductCard.css";
 
-const ProductCard = ({ product }) => {
+const ProductCard = (props) => {
   const { addToCart } = useCart();
   const [isEnlarged, setIsEnlarged] = useState(false);
+  const product = props.product;
+  const isTransitioning = props.isTransitioning ?? false;
 
   const toggleImageSize = () => {
     setIsEnlarged(!isEnlarged);
@@ -20,7 +22,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="product-card">
+    <div className={`product-card ${isTransitioning ? "transitioning" : ""}`}>
       <img
         src={product.image}
         alt={product.title}
@@ -50,6 +52,7 @@ ProductCard.propTypes = {
       count: PropTypes.number,
     }),
   }).isRequired,
+  isTransitioning: PropTypes.bool,
 };
 
 export default ProductCard;

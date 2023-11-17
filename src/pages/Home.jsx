@@ -40,20 +40,15 @@ const Home = () => {
   return (
     <div className="home">
       <p>Welcome to TARCET</p>
-      {/* ... */}
       {isLoading ? (
         <p>Loading...</p>
       ) : (
         products.length > 0 && (
           <div className="product-carousel">
-            <div
-              className={`product-card ${
-                isTransitioning ? "transitioning" : ""
-              }`}
-              key={products[currentProductIndex].id}
-            >
-              <ProductCard product={products[currentProductIndex]} />
-            </div>
+            <ProductCard
+              product={products[currentProductIndex]}
+              isTransitioning={isTransitioning}
+            />
           </div>
         )
       )}
