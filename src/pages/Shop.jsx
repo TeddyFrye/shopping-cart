@@ -8,6 +8,7 @@ const Shop = () => {
   const [displayedProducts, setDisplayedProducts] = useState([]);
   const [loading, setLoading] = useState(false);
   const itemsPerPage = 6;
+  const threshold = 150;
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -19,12 +20,13 @@ const Shop = () => {
   }, []);
 
   const fetchMoreData = () => {
-    if (loading) return;
+    if (loading || displayedProducts.length >= products.length) return;
 
     setLoading(true);
 
     setTimeout(() => {
-      const moreProducts = products.slice(0, itemsPerPage);
+      const start = displayedProducts.length;
+      const moreProducts = products.slice(start, start + itemsPerPage);
       setDisplayedProducts((prevProducts) => [
         ...prevProducts,
         ...moreProducts,

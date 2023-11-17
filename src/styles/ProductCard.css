@@ -17,7 +17,7 @@
 
 .product-card img {
   max-width: 150px;
-  height: auto;
+  height: 150px;
   margin: 0 auto;
 }
 
@@ -37,7 +37,7 @@
 
   .product-card h3 {
     margin: 0.5em 0;
-    font-size: 1em;
+    font-size: .75em;
     line-height: 1.2em;
     height: 3em; /* Adjust based on your content */
     overflow: hidden;
