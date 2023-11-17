@@ -1,0 +1,37 @@
+
+  .content {
+    flex-grow: 1; /* Ensures that the content area takes up the remaining space */
+    /* Add padding, margins, and other styles as needed */
+  }
+  
+/* Layout for the entire app */
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Style for the NavBar */
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Align items on opposite ends */
+    align-items: center;
+    background-color: #333; /* Example background color */
+    color: white;
+    padding: 0.5rem 1rem;
+    width: 100%; /* Full width */
+  }
+  
+  .navbar-link {
+    color: white;
+    margin-right: 15px; /* Space between links */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  /* Style for the main content area */
+  .content {
+    flex-grow: 1; /* Take up remaining space */
+    padding: 1rem; /* Add padding around the content */
+  }
+  
+  

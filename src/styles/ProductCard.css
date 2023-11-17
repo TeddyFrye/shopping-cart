@@ -7,6 +7,8 @@
     height: 300px;
     margin: 10px;
     background-color: #ccc;
+    /* Carousel Transition Styles */
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
 .product-card:hover {
@@ -14,7 +16,7 @@
   }
   
 .product-card img {
-    max-width: 50px;
+    max-width: 100px;
     height: auto;
     transition: transform 0.3s ease, z-index 0s;
   }
