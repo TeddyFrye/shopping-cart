@@ -32,7 +32,7 @@ const Home = () => {
         ); // Change the product
         setIsTransitioning(false); // End the transition
       }, 500); // Match this with your CSS transition duration
-    }, 3500); // This is the interval for each product display
+    }, 9000); // This is the interval for each product display
 
     return () => clearInterval(timer);
   }, [products]);
@@ -41,23 +41,17 @@ const Home = () => {
     <div className="home">
       {/* ... */}
       {isLoading ? (
-        <div className="loading">
-          <p>Loading...</p>
-        </div>
+        <p>Loading...</p>
       ) : (
         products.length > 0 && (
-          <div className="product-carousel-container">
-            <div className="product-carousel">
-              <div
-                className={`product-card ${
-                  isTransitioning ? "transitioning" : ""
-                }`}
-              >
-                <ProductCard
-                  key={products[currentProductIndex].id}
-                  product={products[currentProductIndex]}
-                />
-              </div>
+          <div className="product-carousel">
+            <div
+              className={`product-card ${
+                isTransitioning ? "transitioning" : ""
+              }`}
+              key={products[currentProductIndex].id}
+            >
+              <ProductCard product={products[currentProductIndex]} />
             </div>
           </div>
         )

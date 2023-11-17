@@ -6,8 +6,8 @@ const NavBar = () => {
     <div className="navbar">
       <div className="logo">
         <img
-          src="../../public/target logo.png"
-          alt="target logo"
+          src="../../public/tarcetlogo2.svg"
+          alt="tarcet logo"
           className="logo"
         ></img>
         <h1 className="navbar-title">TARCET</h1>
