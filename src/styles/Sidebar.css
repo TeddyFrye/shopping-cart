@@ -1,17 +1,30 @@
 .sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 25px; /* Smaller width for collapsed state */
-    background-color: #f0f0f0;
+    position: fixed; /* Fixed positioning relative to the viewport */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right side */
+    width: 100px; /* Width of the sidebar */
+    height: 100vh; /* Full height of the viewport */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    z-index: 10; /* Ensure it sits above other content */
+    background: #f9f9f9; /* Background color of the sidebar */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); 
     padding: 20px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    z-index: 100; /* Ensure it's above other elements */
+  }
+
+.sidebar button {
+    border: 1px solid #5c5c5c;
+    box-shadow: 0 2px 3px #ccc;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
   }
   
   .sidebar.expanded {
     width: 300px; 
     }
+
+
   

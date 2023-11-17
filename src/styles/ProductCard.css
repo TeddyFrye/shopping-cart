@@ -19,7 +19,6 @@
     max-width: 100px;
     height: auto;
     transition: transform 0.3s ease, z-index 0s;
-    border: 3px solid white;
   }
 
 .product-card img:hover {
@@ -33,6 +32,19 @@
     transform: translate(-50%, -50%) scale(5); /* Adjust position and scale */
     z-index: 10; /* Ensure it's above the overlay */
     cursor: pointer;
+  }
+
+  .product-card  h3 {
+    margin: 0.5em 0; /* Adjust the margin as needed */
+    font-size: 1em; /* Adjust the font size as needed */
+    line-height: 1.2em; /* Adjust line height for better readability */
+    height: 2.4em; /* 2 lines of text, adjust as needed */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Show ellipsis after 2 lines */
+    word-wrap: break-word;
   }
 
 .product-list {
