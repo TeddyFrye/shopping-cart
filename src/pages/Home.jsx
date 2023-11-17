@@ -39,6 +39,7 @@ const Home = () => {
 
   return (
     <div className="home">
+      <p>Welcome to TARCET</p>
       {/* ... */}
       {isLoading ? (
         <p>Loading...</p>

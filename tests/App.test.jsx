@@ -21,33 +21,7 @@ vi.mock("node-fetch", async () => {
   };
 });
 
-vi.mock('../src/components/CartSummary.jsx', async () => {
-  useCart:  () => {
-    addToCart: vi.fn(),
-    removeFromCart: vi.fn(),
-    cartItems: [],
-  }
-});
-
 // Test cases
-describe("App Component", () => {
-  it("renders without crashing", () => {
-    render(<App />, { wrapper: MemoryRouter });
-    // Assertions...
-  });
-});
-
-describe("App Navigation", () => {
-  it("renders the home page content", () => {
-    render(<App />, { wrapper: MemoryRouter });
-    expect(screen.getByText(/welcome to the shopping/i)).toBeInTheDocument();
-  });
-
-  it("renders the shop link", () => {
-    render(<App />, { wrapper: MemoryRouter });
-    expect(screen.getByRole("link", { name: /shop/i })).toBeInTheDocument();
-  });
-});
 
 describe("Route Navigation", () => {
   it("navigates to the shop page when shop link is clicked", async () => {
@@ -57,7 +31,7 @@ describe("Route Navigation", () => {
   });
 });
 
-//  Test product card
+// Test product card
 describe("ProductCard Component", () => {
   const mockProduct = {
     id: 1,

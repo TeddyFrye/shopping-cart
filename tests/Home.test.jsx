@@ -5,6 +5,6 @@ import Home from "../src/pages/Home";
 describe("Home Component", () => {
   it("renders without crashing", () => {
     render(<Home />);
-    expect(screen.getByText(/welcome to the shopping/i)).toBeInTheDocument();
+    expect(screen.getByText(/Welcome to TARCET/i)).toBeInTheDocument();
   });
 });

@@ -1,7 +1,7 @@
 // CartSummary.test.jsx
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
-import { CartProvider, useCart } from "./CartSummary";
+import { CartProvider, useCart } from "../src/components/CartSummary";
 
 // Test component that uses the CartSummary context
 const TestComponent = () => {
