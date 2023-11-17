@@ -1,7 +1,48 @@
-.product-carousel {
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Start aligning items from the top */
+  min-height: 100vh; /* 100% of the viewport height */
+  padding-top: 60px; /* Adjust this value to push the content down by the height of the navbar */
+  overflow: hidden;
+}
+
+.loading {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    position: relative; /* Important if you're absolutely positioning your product cards */
+    height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+
   }
+  
+  .product-carousel-container {
+    width: 100%;
+    padding: 20px 0; /* Give some vertical space */
+  }
+
+.product-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Let it be as tall as it needs to be */
+  padding: 0 25px; /* Horizontal padding only */
+}
+  
+  .product-carousel .product-card {
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    width: 80%; /* Adjust width as necessary */
+    height: auto; /* Let the height be as tall as it needs to be */
+    margin: 0 auto; /* This will center the card horizontally */
+    background-color: #ffffff;
+  }
+  
+  
+  
+  .product-carousel .product-card.transitioning {
+    opacity: 0; /* Fade out */
+    transform: scale(0.95); /* Slightly smaller */
+  }
+  

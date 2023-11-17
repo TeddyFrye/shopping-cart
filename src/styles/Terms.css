@@ -1,0 +1,21 @@
+/* Terms.css */
+.terms {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .terms form {
+    margin-top: 20px;
+  }
+  
+  .terms input[type="text"] {
+    margin-left: 10px;
+    padding: 5px;
+  }
+  
+  .terms button {
+    margin-left: 10px;
+    padding: 5px 10px;
+  }
+  

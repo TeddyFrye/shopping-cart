@@ -41,12 +41,23 @@ const Home = () => {
     <div className="home">
       {/* ... */}
       {isLoading ? (
-        <p>Loading...</p>
+        <div className="loading">
+          <p>Loading...</p>
+        </div>
       ) : (
         products.length > 0 && (
-          <div className="product-carousel">
-            <div className="product-card">
-              <ProductCard product={products[currentProductIndex]} />
+          <div className="product-carousel-container">
+            <div className="product-carousel">
+              <div
+                className={`product-card ${
+                  isTransitioning ? "transitioning" : ""
+                }`}
+              >
+                <ProductCard
+                  key={products[currentProductIndex].id}
+                  product={products[currentProductIndex]}
+                />
+              </div>
             </div>
           </div>
         )

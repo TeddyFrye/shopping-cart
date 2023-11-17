@@ -11,22 +11,6 @@
     height: 100vh; /* Full viewport height */
   }
   
-  /* Style for the NavBar */
-  .navbar {
-    display: flex;
-    justify-content: space-between; /* Align items on opposite ends */
-    align-items: center;
-    background-color: #333; /* Example background color */
-    color: white;
-    padding: 0.5rem 1rem;
-    width: 100%; /* Full width */
-  }
-  
-  .navbar-link {
-    color: white;
-    margin-right: 15px; /* Space between links */
-    text-decoration: none; /* Remove underline from links */
-  }
   
   /* Style for the main content area */
   .content {

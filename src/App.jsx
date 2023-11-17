@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Shop from "./pages/Shop.jsx";
+import Terms from "./pages/Terms.jsx";
 import NavBar from "./components/Navbar.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 import { CartProvider } from "./components/CartSummary.jsx";
@@ -23,6 +24,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/shop" element={<Shop />} />
+              <Route path="/terms" element={<Terms />} />
             </Routes>
           </div>
           <Sidebar isExpanded={isCartVisible} toggleCart={toggleCart} />
