@@ -38,7 +38,7 @@ const Sidebar = ({ isExpanded, toggleCart }) => {
   return (
     <div className={`sidebar ${isExpanded ? "expanded" : ""}`}>
       <button onClick={toggleCart}>
-        {isExpanded ? "Hide Cart" : `Cart (${totalItems})`}
+        {isExpanded ? "Hide Cart" : `View Cart (${totalItems})`}
       </button>
       {isExpanded && (
         <>
