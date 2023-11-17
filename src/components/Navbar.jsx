@@ -5,11 +5,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <div className="logo">
-        <img
-          src="../../public/tarcetlogo2.svg"
-          alt="tarcet logo"
-          className="logo"
-        ></img>
+        <img src="tarcetlogo2.svg" alt="tarcet logo" className="logo"></img>
         <h1 className="navbar-title">TARCET</h1>
       </div>
       <Link to="/" className="navbar-link">
