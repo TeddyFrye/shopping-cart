@@ -1,6 +1,7 @@
 import { useCart } from "./CartSummary";
 import PropTypes from "prop-types";
 import "../styles/Sidebar.css";
+import shoppingCartImg from "../../public/shoppingcartimg.png";
 
 const Sidebar = ({ isExpanded, toggleCart }) => {
   const { cartItems, removeFromCart } = useCart();
@@ -38,7 +39,11 @@ const Sidebar = ({ isExpanded, toggleCart }) => {
   return (
     <div className={`sidebar ${isExpanded ? "expanded" : ""}`}>
       <button onClick={toggleCart}>
-        {isExpanded ? "Hide Cart" : `View Cart (${totalItems})`}
+        {isExpanded ? (
+          "Hide Cart"
+        ) : (
+          <img src={shoppingCartImg} alt={`View Cart (${totalItems})`} />
+        )}
       </button>
       {isExpanded && (
         <>

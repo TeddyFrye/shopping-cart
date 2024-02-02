@@ -32,6 +32,8 @@
     background-color: #6f0101;
     color: rgb(255, 255, 255);
     font-size: 115%;
+    border-bottom: #ffffff 5px solid;
+    margin-bottom: 0px;
   }
   
   .cart-summary {

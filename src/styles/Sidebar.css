@@ -17,13 +17,14 @@
     border-radius: 4px;
     color: rgb(0, 0, 0);
     padding: 5px 10px;
-    margin-top: 0px;
+    margin-top: -10px;
+    margin-left: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 15px;
-    color: white;
-    background-color: #920202;
+    color: rgb(51, 1, 1);
+    background-color: #a2848477;
     opacity: 1;
   }
   
@@ -33,6 +34,17 @@
     background-color: white;
     box-shadow: 1px 1px 10px #1b1b1b;
     top: 0px;
+    }
+
+    .sidebar button:hover {
+      background-color: #a28484;
+      color: rgb(51, 1, 1);
+    }
+
+    .sidebar button img {
+      height: 30px;
+      width: 30px;
+      filter: invert(100%)
     }
 
 

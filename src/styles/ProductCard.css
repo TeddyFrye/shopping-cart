@@ -1,5 +1,6 @@
 .product-card {
   box-shadow: 0 2px 3px #ccc;
+  box-shadow:rgba(0, 0, 0, 0.5) 0px 0px 10px;
   padding: 10px;
   text-align: center;
   width: 200px;
@@ -23,6 +24,7 @@
 
 .product-card img:hover {
   cursor: pointer;
+  color:rgba(183, 0, 0, 0.5)
 }
   
   .product-card img.enlarged {
@@ -52,13 +54,19 @@
   }
   
   .product-card button {
-    border: 1px solid #7b6060;
+    border: 1px solid #3c0101;
     border-radius: 4px;
-    background-color: #920202;
-    color: white;
+    background-color: #8d1c1c;
+    color: rgb(255, 221, 221);
     padding: 5px 10px;
     align-self: flex-end; /* Align button to the bottom right */
     font-size: 10px;
+  }
+
+  .product-card button:active {
+    background-color: #470e0e;
+    color: #ffffff;
+    
   }
 
   .overlay {
