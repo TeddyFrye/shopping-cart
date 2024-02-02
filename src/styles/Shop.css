@@ -1,6 +1,16 @@
 .shop-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  column-count: 3;
+  column-gap: 10px;
+  width: 100%;
+}
+
+.product-card {
+  margin-bottom: 10px;
+  break-inside: avoid; /* Prevents the item from splitting across columns */
+}
+
+
