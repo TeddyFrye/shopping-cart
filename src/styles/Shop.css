@@ -3,14 +3,18 @@
   -moz-column-gap: 10px;
   -webkit-column-count: 3;
   -webkit-column-gap: 10px;
+  padding-top: 10px;
   column-count: 3;
   column-gap: 10px;
   width: 100%;
+  align-items: flex-start;
 }
 
 .product-card {
+  margin-top: 0px;
   margin-bottom: 10px;
-  break-inside: avoid; /* Prevents the item from splitting across columns */
+  break-inside: avoid; 
+  align-items: flex-start;
 }
 
 
