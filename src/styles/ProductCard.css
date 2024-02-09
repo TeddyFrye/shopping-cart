@@ -1,19 +1,20 @@
 .product-card {
-  box-shadow: 0 2px 3px #ccc;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
   box-shadow:rgba(0, 0, 0, 0.5) 0px 0px 10px;
   padding: 10px;
   text-align: center;
   width: 200px;
   height: 300px;
   margin: 10px;
-  background-color: #ffffff;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid var(--black);
 }
 
 .product-card:hover {
-  box-shadow: 0 1px 10px #4d4d4d;
+  box-shadow: 0 1px 10px var(--black);
 }
 
 .product-card img {
@@ -54,9 +55,9 @@
   }
   
   .product-card button {
-    border: 1px solid #3c0101;
+    border: 1px solid var(--primary);
     border-radius: 4px;
-    background-color: #8d1c1c;
+    background-color: var(--secondary);
     color: rgb(255, 221, 221);
     padding: 5px 10px;
     align-self: flex-end; /* Align button to the bottom right */
@@ -64,8 +65,8 @@
   }
 
   .product-card button:active {
-    background-color: #470e0e;
-    color: #ffffff;
+    background-color: var(--primary);
+    color: var(--white);
   }
 
   .overlay {

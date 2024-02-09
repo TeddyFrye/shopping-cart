@@ -8,6 +8,7 @@
   column-gap: 10px;
   width: 100%;
   align-items: flex-start;
+  background-color: var(--lightgrey);
 }
 
 .product-card {
@@ -15,6 +16,7 @@
   margin-bottom: 10px;
   break-inside: avoid; 
   align-items: flex-start;
+  background-color: var(--white);
 }
 
 
